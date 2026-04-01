@@ -20,11 +20,11 @@ http:
           - content="08cms
           - typeof(_08cms)
         case-insensitive: true
-      # - type: word
-      #   name: 0example
-      #   words:
-      #     - <title>example domain</title>
-      #   case-insensitive: true
+       - type: word
+         name: 0example
+         words:
+           - <title>example domain</title>
+         case-insensitive: true
       - type: word
         name: 17mail-易企邮
         words:
