@@ -1,0 +1,1069 @@
+id: web-favicon
+info:
+  name: web-favicon
+  author: auto-build
+  severity: info
+  metadata:
+    max-request: 2
+  tags: detect,tech
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/favicon.ico'
+      - '{{BaseURL}}/images/favicon.ico'
+    stop-at-first-match: true
+    max-redirects: 2
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: anwang-wayosac
+        dsl:
+          - 'status_code==200 && ("715c49c5512d763084a4082c27d935e1" == md5(body))'
+      - type: dsl
+        name: apache-apisix-dashboard
+        dsl:
+          - 'status_code==200 && ("6d07440dcda38480ac6fd8c32edf0102" == md5(body))'
+      - type: dsl
+        name: asynqmon
+        dsl:
+          - 'status_code==200 && ("7d56c3bcc4d9522bdc958785f1866776" == md5(body))'
+      - type: dsl
+        name: avtech-video-web-server
+        dsl:
+          - 'status_code==200 && ("ed8cf53ef6836184587ee3a987be074a" == md5(body))'
+      - type: dsl
+        name: cisco-ios-xe
+        dsl:
+          - 'status_code==200 && ("d2962d133fd209cf567d05d1683f3fc1" == md5(body))'
+      - type: dsl
+        name: cool-admin
+        dsl:
+          - 'status_code==200 && ("0a1a4905050aeb5bcc9d0c124bb96eb6" == md5(body))'
+      - type: dsl
+        name: coreshop
+        dsl:
+          - 'status_code==200 && ("ac08a66b033430e3034e395cc9f04533" == md5(body))'
+      - type: dsl
+        name: dtcloud
+        dsl:
+          - 'status_code==200 && ("49fe0618acdcd7c9dc443faca20d7bd9" == md5(body))'
+      - type: dsl
+        name: ecology-oa
+        dsl:
+          - 'status_code==200 && ("41eca7a9245394106a09b2534d8030df" == md5(body))'
+      - type: dsl
+        name: edoc
+        dsl:
+          - 'status_code==200 && ("b6ff5fb80eb1412c57eb24b6df8148ec" == md5(body))'
+      - type: dsl
+        name: enjoyscm 捷诚供应链管理系统
+        dsl:
+          - 'status_code==200 && ("ddf58a9acbbf8a03b4d8e460f69342ab" == md5(body))'
+      - type: dsl
+        name: glpi
+        dsl:
+          - 'status_code==200 && ("c9339a2ecde0980f40ba22c2d237b94b" == md5(body))'
+      - type: dsl
+        name: gocd-params
+        dsl:
+          - 'status_code==200 && ("423a583332e4232659690dead75184e6" == md5(body))'
+      - type: dsl
+        name: gravcms
+        dsl:
+          - 'status_code==200 && ("0b11a9699ae33de62a1d05be8f733486" == md5(body))'
+      - type: dsl
+        name: h5s-video-platform
+        dsl:
+          - 'status_code==200 && ("71d350f81224c181b2fc5851fc61b0ba" == md5(body))'
+      - type: dsl
+        name: hikvision-ip-camera
+        dsl:
+          - 'status_code==200 && ("89b932fcc47cf4ca3faadb0cfdef89cf" == md5(body))'
+      - type: dsl
+        name: hikvision-ip网络对讲广播系统
+        dsl:
+          - 'status_code==200 && ("e854b2eaa9e4685a95d8052d5e3165bc" == md5(body))'
+      - type: dsl
+        name: hikvision-isecure-center
+        dsl:
+          - 'status_code==200 && ("4209fe52e5c15345d0a1250f68a14d1e" == md5(body))'
+      - type: dsl
+        name: huawei-jump-server
+        dsl:
+          - 'status_code==200 && ("1f2d27250647de902d396b75d9a2b0cf" == md5(body))'
+      - type: dsl
+        name: i-doc-view 在线文档预览
+        dsl:
+          - 'status_code==200 && ("1fa66ff1d1d1ce0a8ba05838c1b58a15" == md5(body))'
+      - type: dsl
+        name: ikuai8-cloud
+        dsl:
+          - 'status_code==200 && ("c1af9e622eae1dcb95ef44f996bf6228" == md5(body))'
+      - type: dsl
+        name: ip-guard
+        dsl:
+          - 'status_code==200 && ("eca5de8afe00f5b9990cfdf11f4d1de4" == md5(body))'
+          - 'status_code==200 && ("210a3c89d4ab5effa18d6dd7a9627376" == md5(body))'
+      - type: dsl
+        name: jboss
+        dsl:
+          - 'status_code==200 && ("799f70b71314a7508326d1d2f68f7519" == md5(body))'
+      - type: dsl
+        name: jeecgboot
+        dsl:
+          - 'status_code==200 && ("dc7a0b69060a0262530b47b46ba7f9b6" == md5(body))'
+      - type: dsl
+        name: jetty
+        dsl:
+          - 'status_code==200 && ("ed7d5c39c69262f4ba95418d4f909b10" == md5(body))'
+      - type: dsl
+        name: jianmu
+        dsl:
+          - 'status_code==200 && ("a60399bff2cbc1462547d9a38284264d" == md5(body))'
+      - type: dsl
+        name: 极致CMS
+        dsl:
+          - 'status_code==200 && ("c7bfdd8a6b762a5220f7217552592115" == md5(body))'
+      - type: dsl
+        name: jumpserver
+        dsl:
+          - 'status_code==200 && ("20334371817c7368907b5ea52aab2d9e" == md5(body))'
+      - type: dsl
+        name: kasmvnc
+        dsl:
+          - 'status_code==200 && ("-360184491" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: kodbox可道云
+        dsl:
+          - 'status_code==200 && ("dfe2fd3d8458e166616692b39c32baf9" == md5(body))'
+      - type: dsl
+        name: landray-oa
+        dsl:
+          - 'status_code==200 && ("302464c3f6207d57240649926cfc7bd4" == md5(body))'
+      - type: dsl
+        name: landray-oa系统
+        dsl:
+          - 'status_code==200 && ("302464c3f6207d57240649926cfc7bd4" == md5(body))'
+      - type: dsl
+        name: leadshop
+        dsl:
+          - 'status_code==200 && ("34e851938a4a941ce6318d62253892ec" == md5(body))'
+          - 'status_code==200 && ("5b0665d0447da9c06646da8f282bf372" == md5(body))'
+      - type: dsl
+        name: linked-see
+        dsl:
+          - 'status_code==200 && ("4aa64c674d4f0b5f85b17ae727fa5e7e" == md5(body))'
+      - type: dsl
+        name: muhttpd
+        dsl:
+          - 'status_code==200 && ("e50cc7cc4f8d7f2346d901c35dee3a5f" == md5(body))'
+      - type: dsl
+        name: netcom-ngfw
+        dsl:
+          - 'status_code==200 && ("9252bd07dbb6277f7ae898da87dada3a" == md5(body))'
+      - type: dsl
+        name: nexpose
+        dsl:
+          - 'status_code==200 && ("f64ce96bbacc76d6db4d4eb0e78881da" == md5(body))'
+      - type: dsl
+        name: niushop
+        dsl:
+          - 'status_code==200 && ("4b320a972023a99c21bffa7267ba6546" == md5(body))'
+      - type: dsl
+        name: onekeyadmin
+        dsl:
+          - 'status_code==200 && ("507fcbebf363f4327fcb49294a864c24" == md5(body))'
+      - type: dsl
+        name: pear-project
+        dsl:
+          - 'status_code==200 && ("4a912be52af99e4407d53651ccde64e6" == md5(body))'
+      - type: dsl
+        name: phpstudy
+        dsl:
+          - 'status_code==200 && ("406165e1c4ec82ac49847ca8e7810bae" == md5(body))'
+      - type: dsl
+        name: qax-secfox
+        dsl:
+          - 'status_code==200 && ("f3147f50cfd23455cb5fdf0dcd890dac" == md5(body))'
+      - type: dsl
+        name: ruckus-wireless
+        dsl:
+          - 'status_code==200 && ("ed8cf53ef6836184587ee3a987be074a" == md5(body))'
+      - type: dsl
+        name: ruijie-router-nbr 路由器
+        dsl:
+          - 'status_code==200 && ("a45883b12d753bc87aff5bddbef16ab3" == md5(body))'
+      - type: dsl
+        name: ruoyi-system
+        dsl:
+          - 'status_code==200 && ("e49fd30ea870c7a820464ca56a113e6e" == md5(body))'
+      - type: dsl
+        name: Saber
+        dsl:
+          - 'status_code==200 && ("1047841028" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("-1820270953" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: sangfor-zero-trust-integrated-gateway
+        dsl:
+          - 'status_code==200 && ("61ea21861c73970bc98ed619f2748992" == md5(body))'
+      - type: dsl
+        name: splunk-enterprise
+        dsl:
+          - 'status_code==200 && ("e60c968e8ff3cc2f4fb869588e83afc6" == md5(body))'
+      - type: dsl
+        name: spring-framework
+        dsl:
+          - 'status_code==200 && ("0488faca4c19046b94d07c3ee83cf9d6" == md5(body))'
+      - type: dsl
+        name: tableau
+        dsl:
+          - 'status_code==200 && ("783f669ae8336979325ef497a5e43037" == md5(body))'
+      - type: dsl
+        name: teslamate
+        dsl:
+          - 'status_code==200 && ("0e3b30468f89fa98cb22983c89e49d0a" == md5(body))'
+      - type: dsl
+        name: tikiwiki
+        dsl:
+          - 'status_code==200 && ("e789cc1db6eefad0b58c9dda94f57d3c" == md5(body))'
+      - type: dsl
+        name: umami
+        dsl:
+          - 'status_code==200 && ("e7acd200faa2134fc17bce2e39304292" == md5(body))'
+      - type: dsl
+        name: wayos - 维盟ac集中管理平台
+        dsl:
+          - 'status_code==200 && ("715c49c5512d763084a4082c27d935e1" == md5(body))'
+      - type: dsl
+        name: xray-clandbeta
+        dsl:
+          - 'status_code==200 && ("2fdaf65cb9342b76c97b027fc6f545e8" == md5(body))'
+      - type: dsl
+        name: yonyou-grp-u8
+        dsl:
+          - 'status_code==200 && ("b41be1ccc6f9f2894e0cfcf23acf5fc0" == md5(body))'
+      - type: dsl
+        name: zentao-system
+        dsl:
+          - 'status_code==200 && ("b1d3deb4bd16c8c1637235515deea114" == md5(body))'
+      - type: dsl
+        name: 九思协同办公系统
+        dsl:
+          - 'status_code==200 && ("fc171c32d6d99f006b1ade860753a9db" == md5(body))'
+      - type: dsl
+        name: 合肥易用信息科技有限公司crm系统
+        dsl:
+          - 'status_code==200 && ("2e7ead236832180553dab45ba77db6b7" == md5(body))'
+      - type: dsl
+        name: 奇安信-vpn
+        dsl:
+          - 'status_code==200 && ("4cf31d7e53197f79b435b66cc8cb3098" == md5(body))'
+      - type: dsl
+        name: 契约锁电子签章系统
+        dsl:
+          - 'status_code==200 && ("ad17b1fc5025ca47f743f7e69c956b26" == md5(body))'
+      - type: dsl
+        name: 拓尔思-mas
+        dsl:
+          - 'status_code==200 && ("ea5d31497e6f1304cdf4f4660a9b86df" == md5(body))'
+      - type: dsl
+        name: 捷顺 jielink智能终端操作平台
+        dsl:
+          - 'status_code==200 && ("2f809c4759399cae458a29f24490a114" == md5(body))'
+      - type: dsl
+        name: 时空智友企业信息管理
+        dsl:
+          - 'status_code==200 && ("2464cbce5dd2681dd4fb62d055520d78" == md5(body))'
+      - type: dsl
+        name: 正通慧丰实例控制台-oa
+        dsl:
+          - 'status_code==200 && ("f07d5960a56ea44c35496bf1dea9a015" == md5(body))'
+      - type: dsl
+        name: 泛微e-mobile 移动管理平台消息服务
+        dsl:
+          - 'status_code==200 && ("ef1091afecc18200b9322cceb5c683fa" == md5(body))'
+      - type: dsl
+        name: 泰信tmailer邮件系统
+        dsl:
+          - 'status_code==200 && ("9f99176691d4caf44367865e2602f555" == md5(body))'
+      - type: dsl
+        name: 深信服应用交付管理系统
+        dsl:
+          - 'status_code==200 && ("98128e625a3b98546a206c2170fb5eb3" == md5(body))'
+      - type: dsl
+        name: 点晴mis管理信息系统
+        dsl:
+          - 'status_code==200 && ("837f7af9a5509a71122fe77505e4451c" == md5(body))'
+      - type: dsl
+        name: 用友u8+oa基础版
+        dsl:
+          - 'status_code==200 && ("b730edbe9bc850ae9f35dce11edd2c2d" == md5(body))'
+      - type: dsl
+        name: 科荣 aio
+        dsl:
+          - 'status_code==200 && ("494d1a9cf585c0b6b45462a224fccd90" == md5(body))'
+      - type: dsl
+        name: 紫光档案管理系统
+        dsl:
+          - 'status_code==200 && ("3e2ee25dc73811fe2a697deefe447017" == md5(body))'
+      - type: dsl
+        name: 综合安防管理平台 hikvision-isecure-center
+        dsl:
+          - 'status_code==200 && ("4209fe52e5c15345d0a1250f68a14d1e" == md5(body))'
+          - 'status_code==200 && ("288e14bff231111157309a4cdf3d545e" == md5(body))'
+      - type: dsl
+        name: 软虹oa
+        dsl:
+          - 'status_code==200 && ("5d01f90a8f3fed7c83152bfce0403c2f" == md5(body))'
+      - type: dsl
+        name: 达观rpa
+        dsl:
+          - 'status_code==200 && ("e2e2ba13339c2fea220f8b4fa6c32c0d" == md5(body))'
+      - type: dsl
+        name: 酒店宽带运营系统
+        dsl:
+          - 'status_code==200 && ("af545cc70432a9945c33314e9b6546e7" == md5(body))'
+      - type: dsl
+        name: 金盘图书馆微信管理后台
+        dsl:
+          - 'status_code==200 && ("0488faca4c19046b94d07c3ee83cf9d6" == md5(body))'
+      - type: dsl
+        name: cockpit
+        dsl:
+          - 'status_code==200 && ("688609340" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: aim
+        dsl:
+          - 'status_code==200 && ("-1047157256" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: apache-couchdb
+        dsl:
+          - 'status_code==200 && ("2ab2aae806e8393b70970b2eaace82e0" == md5(body))'
+      - type: dsl
+        name: doris
+        dsl:
+          - 'status_code==200 && ("24048806" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: inlong
+        dsl:
+          - 'status_code==200 && ("1155196680" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: shardingsphere_elasticjob-ui
+        dsl:
+          - 'status_code==200 && ("816588900" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: apache-tomcat
+        dsl:
+          - 'status_code==200 && ("4644f2d45601037b8423d45e13194c93" == md5(body))'
+      - type: dsl
+        name: udp
+        dsl:
+          - 'status_code==200 && ("-1889244460" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: asustor-data-master
+        dsl:
+          - 'status_code==200 && ("1678170702" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: confluence
+        dsl:
+          - 'status_code==200 && ("-305179312" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: automation_360
+        dsl:
+          - 'status_code==200 && ("-1005691603" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: axigen_mobile_webmail
+        dsl:
+          - 'status_code==200 && ("-1247684400" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: quicklancer
+        dsl:
+          - 'status_code==200 && ("1099370896" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: boss-mini
+        dsl:
+          - 'status_code==200 && ("1092427843" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: arc
+        dsl:
+          - 'status_code==200 && ("163538942" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: cachet
+        dsl:
+          - 'status_code==200 && ("-1606065523" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: rv110w_firmware
+        dsl:
+          - 'status_code==200 && ("-646322113" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: gateway
+        dsl:
+          - 'status_code==200 && ("-1166125415" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("-1292923998" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: netscaler_gateway
+        dsl:
+          - 'status_code==200 && ("-1166125415" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("-1292923998" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: commvault
+        dsl:
+          - 'status_code==200 && ("1209838013" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: screenconnect
+        dsl:
+          - 'status_code==200 && ("-82958153" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: solarview_compact
+        dsl:
+          - 'status_code==200 && ("-244067125" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: solarview_compact_firmware
+        dsl:
+          - 'status_code==200 && ("-244067125" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: webpanel
+        dsl:
+          - 'status_code==200 && ("-356182173" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: cms
+        dsl:
+          - 'status_code==200 && ("-47932290" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: craft_cms
+        dsl:
+          - 'status_code==200 && ("-47932290" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: crmeb
+        dsl:
+          - 'status_code==200 && ("699adaf4da1b0dc76ea5464df13755d7" == md5(body))'
+      - type: dsl
+        name: apollo
+        dsl:
+          - 'status_code==200 && ("11794165" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: thinvnc
+        dsl:
+          - 'status_code==200 && ("-1414548363" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: dh-ipc-hdbw23a0rn-zs_firmware
+        dsl:
+          - 'status_code==200 && ("2019488876" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: danswer
+        dsl:
+          - 'status_code==200 && ("484766002" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: hoteldruid
+        dsl:
+          - 'status_code==200 && ("-1521640213" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: d-view_8
+        dsl:
+          - 'status_code==200 && ("-1317621215" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: dotnetnuke
+        dsl:
+          - 'status_code==200 && ("-1465479343" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: dolibarr_erp-crm
+        dsl:
+          - 'status_code==200 && ("440258421" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: spectrum_server_firmware
+        dsl:
+          - 'status_code==200 && ("868509217" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ectouch
+        dsl:
+          - 'status_code==200 && ("127711143" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: timetrax
+        dsl:
+          - 'status_code==200 && ("-661694518" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: elastic
+        dsl:
+          - 'status_code==200 && ("7d0688b40ba64da737b12a3257e6c7b3" == md5(body))'
+      - type: dsl
+        name: elasticsearch
+        dsl:
+          - 'status_code==200 && ("6177bfb75b498e0bb356223ed76ffe43" == md5(body))'
+      - type: dsl
+        name: elgg
+        dsl:
+          - 'status_code==200 && ("413602919" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: eventum
+        dsl:
+          - 'status_code==200 && ("305412257" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: fastadmin
+        dsl:
+          - 'status_code==200 && ("-1036943727" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: 1panel
+        dsl:
+          - 'status_code==200 && ("1300107149" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("1453309674" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: flatpress
+        dsl:
+          - 'status_code==200 && ("-1189292869" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: fogproject
+        dsl:
+          - 'status_code==200 && ("-1952619005" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: fortios
+        dsl:
+          - 'status_code==200 && ("945408572" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: goanywhere_managed_file_transfer
+        dsl:
+          - 'status_code==200 && ("1170495932" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("1484947000" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("1828756398" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: timekeeper
+        dsl:
+          - 'status_code==200 && ("2134367771" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: genieacs
+        dsl:
+          - 'status_code==200 && ("-2098066288" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: gestsup
+        dsl:
+          - 'status_code==200 && ("-283003760" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: gibbon
+        dsl:
+          - 'status_code==200 && ("-165631681" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: glpi
+        dsl:
+          - 'status_code==200 && ("-1474875778" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: h2
+        dsl:
+          - 'status_code==200 && ("116323821" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: control_panel
+        dsl:
+          - 'status_code==200 && ("-476299640" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ds-2cd2026g2-iu-sl_firmware
+        dsl:
+          - 'status_code==200 && ("999357577" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: hikvision
+        dsl:
+          - 'status_code==200 && ("-808437027" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: intercom_broadcast_system
+        dsl:
+          - 'status_code==200 && ("-1830859634" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: vantara_pentaho_business_analytics_server
+        dsl:
+          - 'status_code==200 && ("1749354953" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: jan
+        dsl:
+          - 'status_code==200 && ("-165268926" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: label_studio
+        dsl:
+          - 'status_code==200 && ("-1649949475" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: maximo_asset_management
+        dsl:
+          - 'status_code==200 && ("-399298961" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: icewarp
+        dsl:
+          - 'status_code==200 && ("2144485375" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: icinga
+        dsl:
+          - 'status_code==200 && ("466b3dcce4a3c13f44dd0dc824b1e328" == md5(body))'
+      - type: dsl
+        name: endpoint_manager_mobile
+        dsl:
+          - 'status_code==200 && ("362091310" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: virtual traffic manager
+        dsl:
+          - 'status_code==200 && ("1862800928" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: jeecg-boot
+        dsl:
+          - 'status_code==200 && ("1380908726" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: jeecg_boot
+        dsl:
+          - 'status_code==200 && ("1380908726" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: jenkins
+        dsl:
+          - 'status_code==200 && ("23e8c7bd78e8cd826c5a6073b15068b1" == md5(body))'
+      - type: dsl
+        name: jsherp
+        dsl:
+          - 'status_code==200 && ("-1298131932" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: jorani
+        dsl:
+          - 'status_code==200 && ("-2032163853" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: journyx-jtime
+        dsl:
+          - 'status_code==200 && ("-109972155" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: notebook
+        dsl:
+          - 'status_code==200 && ("97c6417ed01bdc0ae3ef32ae4894fd03" == md5(body))'
+      - type: dsl
+        name: virtual_system_administrator
+        dsl:
+          - 'status_code==200 && ("-1445519482" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: vsa
+        dsl:
+          - 'status_code==200 && ("-1445519482" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: viaware
+        dsl:
+          - 'status_code==200 && ("1521468900" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: kubeflow
+        dsl:
+          - 'status_code==200 && ("-1203021870" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("09282f0ea1a467a103d97ddfb8c1217c" == md5(body))'
+      - type: dsl
+        name: kubeview
+        dsl:
+          - 'status_code==200 && ("-379154636" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: d-copia253mf_plus_firmware
+        dsl:
+          - 'status_code==200 && ("-50306417" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: landray_ekp
+        dsl:
+          - 'status_code==200 && ("831854882" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: dify
+        dsl:
+          - 'status_code==200 && ("97378986" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: simple_editor
+        dsl:
+          - 'status_code==200 && ("159985907" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: digital_experience_platform,liferay_portal
+        dsl:
+          - 'status_code==200 && ("129457226" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: liferay_portal
+        dsl:
+          - 'status_code==200 && ("129457226" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: likeshop
+        dsl:
+          - 'status_code==200 && ("874152924" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: harbor
+        dsl:
+          - 'status_code==200 && ("657337228" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: lobe-chat
+        dsl:
+          - 'status_code==200 && ("1975020705" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: lylme_spage
+        dsl:
+          - 'status_code==200 && ("-282504889" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: msnswitch_firmware
+        dsl:
+          - 'status_code==200 && ("-1721140132" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("-2073748627" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: cloudpanel
+        dsl:
+          - 'status_code==200 && ("151132309" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: exchange_server
+        dsl:
+          - 'status_code==200 && ("1768726119" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: microweber
+        dsl:
+          - 'status_code==200 && ("780351152" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: mikopbx
+        dsl:
+          - 'status_code==200 && ("8309143" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: mcms
+        dsl:
+          - 'status_code==200 && ("1464851260" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: shoretel
+        dsl:
+          - 'status_code==200 && ("268280373" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: majordomo
+        dsl:
+          - 'status_code==200 && ("1903390397" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: modoboa
+        dsl:
+          - 'status_code==200 && ("1949005079" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: monitorr
+        dsl:
+          - 'status_code==200 && ("-211006074" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: monstra
+        dsl:
+          - 'status_code==200 && ("419828698" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: monstra_cms
+        dsl:
+          - 'status_code==200 && ("419828698" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: moosocial
+        dsl:
+          - 'status_code==200 && ("702863115" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: moostore
+        dsl:
+          - 'status_code==200 && ("702863115" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: localai
+        dsl:
+          - 'status_code==200 && ("-976853304" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: n8n
+        dsl:
+          - 'status_code==200 && ("-831756631" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: nexusphp
+        dsl:
+          - 'status_code==200 && ("-582931176" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: nocodb
+        dsl:
+          - 'status_code==200 && ("-2017596142" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: node-red
+        dsl:
+          - 'status_code==200 && ("321591353" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: odoo
+        dsl:
+          - 'status_code==200 && ("a342fe863a8e41dff2a55410c7f118c5" == md5(body))'
+      - type: dsl
+        name: openemr
+        dsl:
+          - 'status_code==200 && ("1971268439" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: opencart
+        dsl:
+          - 'status_code==200 && ("-1443008128" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: simple_realtime_server
+        dsl:
+          - 'status_code==200 && ("1386054408" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: expedition
+        dsl:
+          - 'status_code==200 && ("1499876150" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: pan-os
+        dsl:
+          - 'status_code==200 && ("-631559155" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: processplus
+        dsl:
+          - 'status_code==200 && ("1772087922" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: phpok
+        dsl:
+          - 'status_code==200 && ("1091f8722e63111e50302ecbfdd6e975" == md5(body))'
+          - 'status_code==200 && ("aea2803f24d6f4156bde7681f17c3253" == md5(body))'
+      - type: dsl
+        name: moveit_cloud
+        dsl:
+          - 'status_code==200 && ("989289239" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: moveit_transfer
+        dsl:
+          - 'status_code==200 && ("989289239" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ui
+        dsl:
+          - 'status_code==200 && ("-1477045616" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: panel
+        dsl:
+          - 'status_code==200 && ("-456405319" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("846001371" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: qdpm
+        dsl:
+          - 'status_code==200 && ("762074255" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: qlik_sense
+        dsl:
+          - 'status_code==200 && ("-74348711" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: rancher
+        dsl:
+          - 'status_code==200 && ("51c2a7a38f5eb8b2c5577375a2633827" == md5(body))'
+      - type: dsl
+        name: raspap
+        dsl:
+          - 'status_code==200 && ("-1465760059" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ray
+        dsl:
+          - 'status_code==200 && ("463802404" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: redash
+        dsl:
+          - 'status_code==200 && ("698624197" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: keycloak
+        dsl:
+          - 'status_code==200 && ("-1105083093" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: http_file_server
+        dsl:
+          - 'status_code==200 && ("2124459909" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: revive_adserver
+        dsl:
+          - 'status_code==200 && ("106844876" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: roundcube-webmail
+        dsl:
+          - 'status_code==200 && ("ef9c0362bf20a086bb7c2e8ea346b9f0" == md5(body))'
+      - type: dsl
+        name: roxy-wi
+        dsl:
+          - 'status_code==200 && ("115a65bda90efe228d692227dc196f74" == md5(body))'
+      - type: dsl
+        name: connect
+        dsl:
+          - 'status_code==200 && ("217119619" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: rebuild
+        dsl:
+          - 'status_code==200 && ("871154672" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: rukovoditel
+        dsl:
+          - 'status_code==200 && ("-1499940355" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: freepbx
+        dsl:
+          - 'status_code==200 && ("-1908328911" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("1574423538" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: sante_pacs_server
+        dsl:
+          - 'status_code==200 && ("1185161484" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: content_server
+        dsl:
+          - 'status_code==200 && ("-266008933" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: knowledge_warehouse
+        dsl:
+          - 'status_code==200 && ("-266008933" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: netweaver
+        dsl:
+          - 'status_code==200 && ("-266008933" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: netweaver_application_server_java
+        dsl:
+          - 'status_code==200 && ("-266008933" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: servicenow
+        dsl:
+          - 'status_code==200 && ("1701804003" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: cluster_control
+        dsl:
+          - 'status_code==200 && ("-1815707560" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("160707013" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: shopxo
+        dsl:
+          - 'status_code==200 && ("6774ad0b380e1ffeee4e380352e51f15" == md5(body))'
+      - type: dsl
+        name: pmb
+        dsl:
+          - 'status_code==200 && ("1469328760" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: sitecore
+        dsl:
+          - 'status_code==200 && ("7e7727c980ccf9d9a3d11bbc702f6363" == md5(body))'
+      - type: dsl
+        name: swagger_ui
+        dsl:
+          - 'status_code==200 && ("-1180440057" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: smartertrack
+        dsl:
+          - 'status_code==200 && ("1410071322" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: webmethods
+        dsl:
+          - 'status_code==200 && ("-234335289" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: solarwinds
+        dsl:
+          - 'status_code==200 && ("53317933c27890ae9218697ecc0e97d9" == md5(body))'
+      - type: dsl
+        name: web_help_desk
+        dsl:
+          - 'status_code==200 && ("1895809524" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: analytics
+        dsl:
+          - 'status_code==200 && ("-1381126564" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: mobile
+        dsl:
+          - 'status_code==200 && ("-1274798165" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: web_appliance
+        dsl:
+          - 'status_code==200 && ("-893681401" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: webtitan
+        dsl:
+          - 'status_code==200 && ("1090061843" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: squidex
+        dsl:
+          - 'status_code==200 && ("1099097618" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: devika
+        dsl:
+          - 'status_code==200 && ("-1429839495" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: on-premises_installation
+        dsl:
+          - 'status_code==200 && ("1199592666" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: sysaid
+        dsl:
+          - 'status_code==200 && ("1540720428" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: sysaid_on-premises
+        dsl:
+          - 'status_code==200 && ("1540720428" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: thinkphp
+        dsl:
+          - 'status_code==200 && ("f49c4a4bde1eec6c0b80c2277c76e3db" == md5(body))'
+      - type: dsl
+        name: tileserver
+        dsl:
+          - 'status_code==200 && ("-1258058404" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: office_anywhere_2017
+        dsl:
+          - 'status_code==200 && ("1967132225" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: traefik
+        dsl:
+          - 'status_code==200 && ("010d94298a0b83cc87846064dc26db44" == md5(body))'
+      - type: dsl
+        name: concerto
+        dsl:
+          - 'status_code==200 && ("-534530225" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: modeldb
+        dsl:
+          - 'status_code==200 && ("-2097033750" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: vicidial
+        dsl:
+          - 'status_code==200 && ("1375401192" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: cobranca
+        dsl:
+          - 'status_code==200 && ("876876147" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: identity_manager
+        dsl:
+          - 'status_code==200 && ("-1250474341" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: vvvebjs
+        dsl:
+          - 'status_code==200 && ("524332373" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: wl-wn530h4_firmware
+        dsl:
+          - 'status_code==200 && ("-1350437236" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: web2py
+        dsl:
+          - 'status_code==200 && ("-1680052984" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: mycloud_nas
+        dsl:
+          - 'status_code==200 && ("-1074357885" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: my_cloud_wdbctl0020hwt_firmware
+        dsl:
+          - 'status_code==200 && ("-1074357885" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: wftpserver
+        dsl:
+          - 'status_code==200 && ("963565804" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: api_manager
+        dsl:
+          - 'status_code==200 && ("1398055326" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: moticdsm
+        dsl:
+          - 'status_code==200 && ("617142232" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: xxl-job
+        dsl:
+          - 'status_code==200 && ("1691956220" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ufida-nc
+        dsl:
+          - 'status_code==200 && ("1085941792" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: ufida_erp-nc
+        dsl:
+          - 'status_code==200 && ("1085941792" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: yonyou
+        dsl:
+          - 'status_code==200 && ("1085941792" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: youphptube_encoder
+        dsl:
+          - 'status_code==200 && ("-276846707" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: collaboration
+        dsl:
+          - 'status_code==200 && ("1624375939" == mmh3(base64_py(body)))'
+          - 'status_code==200 && ("475145467" == mmh3(base64_py(body)))'
+      - type: dsl
+        name: zkteco
+        dsl:
+          - 'status_code==200 && ("67c76f647cb8d42a71eb295e003394d2" == md5(body))'
